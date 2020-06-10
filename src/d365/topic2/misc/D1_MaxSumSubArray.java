@@ -38,6 +38,7 @@ public class D1_MaxSumSubArray {
 	
 	public static int maxSubArrayN(int[] nums) {
 		
+		//O(N) & Space O(1)
 		int max = nums[0], curr = nums[0], len = nums.length;
 		for(int i = 1; i < len; i ++) {
 			if(curr < 0) curr = nums[i];
@@ -80,6 +81,7 @@ public class D1_MaxSumSubArray {
 	
 	public static int maxSubArrayDP(int[] nums, int start, int end) {
 		
+		//O(N) & Space O(N)
 		int max = nums[end];
 		int[] dp = new int[end+1];
 		dp[end] = max;
